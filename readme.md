@@ -28,3 +28,7 @@ TL;DR - I have 2 KVMs and 2 USB switchers that can be controlled externally by b
 - Misc wires, heat shink tubing
 
 ![](images/board.jpg)
+
+# License
+
+Code, schematics, images, and models are licensed under GPL v3 (see license file for details).
