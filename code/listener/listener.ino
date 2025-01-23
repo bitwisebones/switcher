@@ -29,12 +29,13 @@ void setup() {
   pinMode(j4_pin, OUTPUT);
   
   Serial.begin(9600);
+  while(!Serial) {}
 
   Serial.println("Attempting to connect to WiFi network...");
 
   while(WiFi.begin(ssid, pass) != WL_CONNECTED) {
     Serial.print(".");
-    delay(5000);
+    delay(1000);
   }
 
   Serial.println("Connected.");
@@ -57,6 +58,13 @@ void setup() {
 
 void loop() {
   mqttClient.poll();
+  if(WiFi.status() != WL_CONNECTED) {
+    Serial.print("WiFi Disconnected. Reconnecting");
+    while(WiFi.begin(ssid, pass) != WL_CONNECTED) {
+      Serial.print(".");
+      delay(1000);
+    }
+  }
 }
 
 void onMqttMessage(int messageSize) {

@@ -6,7 +6,7 @@ A four channel MQTT-controlled button pusher.
 
 ## More Info
 
-The accompanying blog post can be found here. TODO
+The accompanying blog post can be found [here](https://asciigraves.net/posts/workspace-2025-part-2/).
 
 TL;DR - I have 2 KVMs and 2 USB switchers that can be controlled externally by buttons connected via 3.5mm audio cables. I want to be able to press those buttons remotely, and this does that for me.
 

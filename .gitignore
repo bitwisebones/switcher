@@ -1,3 +1,4 @@
 remote-switcher-backups
 *.kicad_prl
 *.FCBak
+trigger
